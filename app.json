@@ -1,6 +1,6 @@
 
 {
-  "name": "GroupManager Bot",
+  "name": "Nexus Güvənlik Bot",
   "description": "Modular Telegram group management bot!",
   "keywords": [
     "telegram",
@@ -9,67 +9,67 @@
     "manager",
     "3"
   ],
-  "repository": "hhttps://github.com/xditya/GroupManager",
+  "repository": "hhttps://github.com/Aliyevdii/Nezrin",
   "env": {
     "ENV": {
-      "description": "Setting this to ANYTHING will enable env variables",
+      "description": "Bunu ANYTHING olaraq təyin etmək env dəyişənlərini aktivləşdirəcək",
       "value": "ANYTHING"
     },
     "TOKEN": {
-      "description": "Your bot token, as a string.",
+      "description": "Sətir kimi bot nişanınız.",
       "value": ""
     },
     "OWNER_ID": {
-      "description": "An integer of consisting of your owner ID",
+      "description": "Sahib identifikatorunuzdan ibarət tam ədəd",
       "value": "719195224"
     },
     "OWNER_USERNAME": {
-      "description": "Your username",
+      "description": "İstifadəçi adınız",
       "value": "xditya"
     },
   
     "URL": {
-      "description": "The Heroku App URL similar to https://<appname>.herokuapp.com/",
+      "description": "Heroku Tətbiqinin URL-i oxşardır https://<appname>.herokuapp.com/",
       "value": ""
     },
     "MESSAGE_DUMP": {
-      "description": "optional: a chat where your replied saved messages are stored, to stop people deleting their old",
+      "description": "isteğe bağlı: insanların köhnə mesajlarını silməsini dayandırmaq üçün cavablandırdığınız yadda saxladığınız mesajların saxlandığı söhbət",
       "value": "-1007777777777"
     },
     "SUDO_USERS": {
-      "description": "A space separated list of user_ids which should be considered sudo users",
+      "description": "Sudo istifadəçiləri hesab edilməli olan user_id-lərinin boşluqla ayrılmış siyahısı",
       "value": "254318997 683538773 719195224 570400686 466337795"
     },
     "SUPPORT_USERS": {
-      "description": "A space separated list of user_ids which should be considered support users (can gban/ungban, nothing else)",
+      "description": "Dəstək istifadəçiləri hesab edilməli olan istifadəçi idlərinin boşluqla ayrılmış siyahısı (gban/ungban bilər, başqa heç nə)",
       "value": "254318997 683538773 570400686 719195224 466337795"
     },
     "WHITELIST_USERS": {
-      "description": "A space separated list of user_ids which should be considered whitelisted - they can't be banned.",
+      "description": "Ağ siyahıya salınmış hesab edilməli olan istifadəçi idlərinin boşluqla ayrılmış siyahısı - onları qadağan etmək olmaz.",
       "value": "254318997 683538773 570400686 466337795"
     },
     "DONATION_LINK": {
-      "description": "Optional: link where you would like to receive donations.",
+      "description": "Könüllü: ianə almaq istədiyiniz link.",
       "value": "https://www.paypal.me/Your_id_here"
     },
     "PORT": {
-      "description": "Port to use for your webhooks",
+      "description": "Veb kancalarınız üçün istifadə etmək üçün port",
       "value": "8443"
     },
     "DEL_CMDS": {
-      "description": "Whether to delete commands from users which don't have rights to use that command",
+      "description": "Bu əmrdən istifadə etmək hüququ olmayan istifadəçilərdən əmrlərin silinib-silinməyəcəyi",
       "value": "True"
     },
     "STRICT_GBAN": {
-      "description": "Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.",
+      "description": "Qbanları köhnə qruplar kimi yeni qruplar arasında da tətbiq edin. Qadağan edilmiş istifadəçi danışanda ona qadağa qoyulacaq.",
       "value": "True"
     },
     "ALLOW_EXCL": {
-      "description": "Whether to allow using exclamation marks ! for commands as well as /.",
+      "description": "Nida işarələrinin istifadəsinə icazə verilib-verilməməsi! əmrlər üçün, eləcə də /.",
       "value": "True"
     },
     "BAN_STICKER": {
-      "description": "Which sticker to use when banning people. Use https://telegram.dog/ShowJsonBot to get the file_id",
+      "description": "İnsanları qadağan edərkən hansı stikerdən istifadə etmək lazımdır. istifadə edin https://telegram.dog/ShowJsonBot almaq üçün file_id",
       "value": "CAADBQADNwEAAjZzSxRZAc49mnFSSAI"
     }
   },
