@@ -20,19 +20,19 @@ from haruka.modules.helper_funcs.misc import paginate_modules
 from haruka.modules.translations.strings import tld, tld_help 
 from haruka.modules.connection import connected
 
-PM_START = """Salam {}, m�0�5nim ad�0�3m {}!
+PM_START = """Salam {}, Mənim Adım{Qabil}!
 
-M�0�5n sizin qrupunuzu t�0�5hl��k�0�5siz �0�6�0�5kild�0�5 qorumaq ���0�4��n yarad�0�3lm�0�3�0�6am
+Mən sizin gurupnuzda təhlükəsizlik uçun yaradılmışam!
 
-M�0�5ni qrupa �0�5lav�0�5 edib admin yetkisi verin
+Mən gurupnuza ekləyib admin yetkisi verin
 
-Sahibim - [Aykhan �9�6�9�1](https://t.me/aykhan_s)
+Sahibim - [Mehdi ”9“6”9–1](https://t.me/A_l_i_y_e_v_d_i)
  
- Botda problem yaranarsa [�7�3Support Group](https://t.me/NezrinSupport) bildirin.
+ Botda problem yaranarsa [Support Group](https://t.me/NEXUS_MMC) bildirin.
  
-�0�3lav�0�5 m�0�5lumat almaq ���0�4��n /help se�0�4in.
+Əlavə məlumat almaq üçün  /help düyməsinə basın
 
- M�0�5ni qrupa �0�5lav�0�5 etm�0�5k ���0�4��n [�7�3BURA](http://t.me/NezrinRobot?startgroup=true) toxunun.
+ Məni gurupnuza əlavə edin [7¼3BURA](http://t.me/NezrinRobot?startgroup=true) toxunun.
 """
 
 
@@ -150,9 +150,9 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START
 
-    keyboard = [[InlineKeyboardButton(text="🇮🇳 Language", callback_data="set_lang_")]]
-    keyboard += [[InlineKeyboardButton(text="🛠 Reporting", callback_data="cntrl_panel_M"), 
-        InlineKeyboardButton(text="❄1�7 Help", callback_data="help_back")]]
+    keyboard = [[InlineKeyboardButton(text="ðŸ‡®ðŸ‡³ Language", callback_data="set_lang_")]]
+    keyboard += [[InlineKeyboardButton(text="ðŸ›  Reporting", callback_data="cntrl_panel_M"), 
+        InlineKeyboardButton(text="â„1¤7 Help", callback_data="help_back")]]
 
     update.effective_message.reply_text(PM_START.format(escape_markdown(first_name), bot.first_name), reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
 
@@ -186,9 +186,9 @@ def control_panel(bot, update):
         M_match = "ThaNos is the best bot" #LMAO, don't uncomment
 
     if M_match:
-        text = "*Control panel* 🛠"
+        text = "*Control panel* ðŸ› "
 
-        keyboard = [[InlineKeyboardButton(text="👤 My settings", callback_data="cntrl_panel_U(1)")]]
+        keyboard = [[InlineKeyboardButton(text="ðŸ‘¤ My settings", callback_data="cntrl_panel_U(1)")]]
 
         #Show connected chat and add chat settings button
         conn = connected(bot, update, chat, user.id, need_admin=False)
@@ -201,10 +201,10 @@ def control_panel(bot, update):
             member = chatG.get_member(user.id)
             if member.status in ('administrator', 'creator'):
                 text += f"\nConnected chat - *{chatG.title}* (you {member.status})"
-                keyboard += [[InlineKeyboardButton(text="👥 Group settings", callback_data="cntrl_panel_G_back")]]
+                keyboard += [[InlineKeyboardButton(text="ðŸ‘¥ Group settings", callback_data="cntrl_panel_G_back")]]
             elif user.id in SUDO_USERS:
                 text += f"\nConnected chat - *{chatG.title}* (you sudo)"
-                keyboard += [[InlineKeyboardButton(text="👥 Group settings (SUDO)", callback_data="cntrl_panel_G_back")]]
+                keyboard += [[InlineKeyboardButton(text="ðŸ‘¥ Group settings (SUDO)", callback_data="cntrl_panel_G_back")]]
             else:
                 text += f"\nConnected chat - *{chatG.title}* (you aren't an admin!)"
         else:
@@ -234,7 +234,7 @@ def control_panel(bot, update):
             query.message.reply_text(text=text, arse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(keyboard))
 
         elif back_match:
-            text = "*User control panel* 🛠"
+            text = "*User control panel* ðŸ› "
             
             query.message.reply_text(text=text, parse_mode=ParseMode.MARKDOWN,
                     reply_markup=InlineKeyboardMarkup(paginate_modules(user.id, 0, USER_SETTINGS, "cntrl_panel_U")))
